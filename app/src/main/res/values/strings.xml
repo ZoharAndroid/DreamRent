@@ -1,0 +1,50 @@
+<resources>
+    <string name="app_name">梦想租赁</string>
+    <string name="nickname">昵称</string>
+    <string name="my_account">我的账户</string>
+    <string name="my_collection">我的收藏</string>
+    <string name="my_share">我要分享</string>
+    <string name="my_extend">我的推广</string>
+    <string name="my_rental">我的租房</string>
+    <string name="my_hire">我的出租</string>
+    <string name="my_service">我的服务</string>
+    <string name="my_appointment">我的预约</string>
+    <string name="my_cash">我要提现</string>
+    <string name="my_install">个人设置</string>
+    <string name="my_voucher">抵用券</string>
+    <string name="customer_service">客服帮助</string>
+    <string name="about_us">关于我们</string>
+
+    <string name="head">头像</string>
+    <string name="unfilled">未填写</string>
+    <string name="sex">性别</string>
+    <string name="secrecy">保密</string>
+    <string name="phone_number">手机号</string>
+    <string name="bound">已绑定</string>
+    <string name="code">推荐码</string>
+    <string name="address">当前地址</string>
+    <string name="real_name">实名认证</string>
+    <string name="modify_password">修改密码</string>
+    <string name="log_out">退出登录</string>
+
+    <string name="trust_rent_title">房屋出租，托管出租</string>
+    <string name="trust_rent_abstract">租赁托管，你值得信赖</string>
+    <string name="trust_rent_button_text">我要出租，立即委托</string>
+
+
+    <string name="cancle">取消</string>
+    <string name="title">请选择时间</string>
+    <string name="commit">确定</string>
+    <string name="year">年</string>
+    <string name="month">月</string>
+    <string name="day">日</string>
+    <string name="hour">时</string>
+    <string name="minute">分</string>
+
+    <string name="select_date">选择日期</string>
+    <string name="current_date">当前日期</string>
+    <string name="select_time">选择时间</string>
+    <string name="current_time">当前时间</string>
+
+
+</resources>

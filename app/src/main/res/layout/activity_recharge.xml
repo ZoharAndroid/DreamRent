@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/recharge_main"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_actionbar" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/Z400px"
+        android:background="@color/colorPrimary">
+
+        <ImageView
+            android:id="@+id/arrow_img"
+            android:layout_width="@dimen/Z200px"
+            android:layout_height="@dimen/Z100px"
+            android:layout_centerInParent="true"
+            android:src="@drawable/context"/>
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/recharge_mode_img"
+            android:layout_width="@dimen/Z150px"
+            android:layout_height="@dimen/Z150px"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@id/arrow_img"
+            android:layout_marginRight="@dimen/Z20px"
+            android:src="@drawable/portrait"
+            />
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="@dimen/Z150px"
+            android:layout_height="@dimen/Z150px"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/arrow_img"
+            android:layout_marginLeft="@dimen/Z20px"
+            android:src="@drawable/portrait"
+            />
+        <LinearLayout
+            android:layout_width="@dimen/Z150px"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/Z10px"
+            android:layout_below="@id/recharge_mode_img"
+            android:layout_toLeftOf="@id/arrow_img"
+            android:layout_marginRight="@dimen/Z20px"
+            android:gravity="center">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="充值方式"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="@dimen/Z150px"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/recharge_mode_img"
+            android:layout_toRightOf="@id/arrow_img"
+            android:layout_marginTop="@dimen/Z10px"
+            android:layout_marginLeft="@dimen/Z20px"
+            android:gravity="center">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="我的账户"/>
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/Z20px"
+        android:background="@color/white"
+        android:orientation="vertical">
+        <TextView
+            android:layout_marginTop="@dimen/Z30px"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/Z50px"
+            android:text="充值金额（元）"
+            android:textSize="@dimen/Z30px"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/Z50px"
+            android:layout_marginTop="@dimen/Z30px"
+            android:layout_marginBottom="@dimen/Z30px"
+            android:orientation="horizontal">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/username"
+                android:layout_gravity="center"/>
+            <com.leslie.dream.mxzlw.widget.v7.BiuEditText
+                android:id="@+id/et_money"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal"
+                android:background="@null"
+                android:hint="请输入充值金额"
+                android:paddingLeft="@dimen/Z6px"
+                android:textColor="#323232"
+                android:textColorHint="#a6a6a6"
+                android:textSize="@dimen/Z35px"
+                android:textCursorDrawable="@drawable/color_cursor"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_recharge"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/Z72px"
+        android:layout_marginLeft="@dimen/Z50px"
+        android:layout_marginRight="@dimen/Z50px"
+        android:layout_marginTop="@dimen/Z60px"
+        android:background="@drawable/bg_btn_commit"
+        android:gravity="center"
+        android:text="充  值"
+        android:textColor="#ffffff"
+        android:textSize="@dimen/Z40px" />
+
+</LinearLayout>

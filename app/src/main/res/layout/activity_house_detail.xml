@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- 对应加载的Activity类名为：HouseDetailContentFragment-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/default_layout_bg"
+    android:orientation="vertical">
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
+        android:layout_weight="1">
+
+        <FrameLayout
+            android:id="@+id/fl_detail_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <ImageButton
+            android:id="@+id/ib_house_detail_back"
+            android:layout_width="35dip"
+            android:layout_height="35dip"
+            android:layout_marginLeft="20dip"
+            android:layout_marginTop="20dip"
+            android:background="@drawable/back_icon" />
+    </FrameLayout>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#AAFFFFFF"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/ib_collection"
+            android:layout_width="40dip"
+            android:layout_height="40dip"
+            android:layout_gravity="center"
+            android:layout_marginLeft="5dip"
+            android:background="@drawable/collection"
+            android:padding="5dip" />
+
+
+        <Button
+            android:background="@drawable/buttonstyle"
+            android:id="@+id/btn_book_see_house"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="2dip"
+            android:layout_marginLeft="5dip"
+            android:layout_marginRight="5dip"
+            android:layout_marginTop="2dp"
+            android:layout_weight="1"
+            android:text="预定看房"
+            android:textColor="#FF9F00"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/btn_immediately_book"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="2dip"
+            android:layout_marginLeft="5dip"
+            android:layout_marginRight="5dip"
+            android:layout_marginTop="2dp"
+            android:layout_weight="1"
+            android:background="#FF9F00"
+            android:text="立即预约"
+            android:textColor="@android:color/white"
+            android:textSize="18sp" />
+    </LinearLayout>
+</LinearLayout>

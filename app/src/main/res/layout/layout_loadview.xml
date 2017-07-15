@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/loadview_ll"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_centerInParent="true"
+    android:background="#ffffff"
+    android:clickable="true"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:visibility="gone">
+
+    <com.leslie.dream.mxzlw.widget.v7.ProgressImageView
+        android:id="@+id/loadview_pb"
+        android:layout_width="@dimen/Z60px"
+        android:layout_height="@dimen/Z60px"
+        android:src="@drawable/spinner_inner_holo" />
+
+    <TextView
+        android:id="@+id/loadview_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/Z10px"
+        android:gravity="center"
+        android:text="加载中"
+        android:textColor="#999999"
+        android:textSize="@dimen/Z30px" />
+
+</LinearLayout>

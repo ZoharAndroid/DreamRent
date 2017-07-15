@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.AccountActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:background="@color/colorPrimary"
+        android:layout_height="@dimen/Z88px">
+
+        <RelativeLayout
+            android:id="@+id/account_back_rl"
+            android:layout_width="@dimen/Z88px"
+            android:layout_height="match_parent">
+            <ImageView
+                android:layout_width="@dimen/Z32px"
+                android:layout_height="@dimen/Z32px"
+                android:layout_centerInParent="true"
+                android:src="@drawable/back" />
+        </RelativeLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="@string/my_account"
+            android:textColor="@color/white"
+            android:textSize="@dimen/Z36px"
+            />
+        <TextView
+            android:id="@+id/account_pay_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/Z20px"
+            android:text="充值"
+            android:textColor="@color/white"
+            android:textSize="@dimen/Z36px"
+             />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_line"
+        android:gravity="center"
+        android:orientation="vertical">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/Z400px"
+            android:background="@drawable/context">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="可用余额（元）"
+                android:textColor="@color/white"
+                android:textSize="@dimen/Z30px"
+                android:layout_alignParentTop="true"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="@dimen/Z100px"
+                 />
+
+            <TextView
+                android:id="@+id/balance_usable_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="@dimen/Z20px"
+                android:text="88.88"
+                android:textColor="@color/white"
+                android:textSize="@dimen/Z50px" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="@dimen/Z20px"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/my_account_ll"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="累计收益（元）"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/Z25px" />
+                    <TextView
+                        android:id="@+id/all_profit_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_marginTop="@dimen/Z15px"
+                        android:text="88.88"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/Z30px" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="@dimen/Z2px"
+                    android:layout_height="match_parent"
+                    android:background="@color/color_line" />
+
+                <LinearLayout
+                    android:id="@+id/this_month_ll"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="本月收益（元）"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/Z25px" />
+                    <TextView
+                        android:id="@+id/this_month_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_marginTop="@dimen/Z15px"
+                        android:text="88.88"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/Z30px" />
+                </LinearLayout>
+
+
+                <View
+                    android:layout_width="@dimen/Z2px"
+                    android:layout_height="match_parent"
+                    android:background="@color/color_line" />
+
+                <LinearLayout
+                    android:id="@+id/last_month_ll"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="上月收益（元）"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/Z25px" />
+                    <TextView
+                        android:id="@+id/last_month_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_marginTop="@dimen/Z15px"
+                        android:text="88.88"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/Z30px" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/Z50px">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/Z30px"
+            android:text="账户历史"
+            android:textSize="@dimen/Z30px"/>
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/Z25px"
+        android:layout_marginTop="@dimen/Z5px"
+        android:background="@color/default_layout_bg" />
+    <com.leslie.dream.mxzlw.widget.v7.RecyclerViewWrap
+        android:id="@+id/account_recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#e5e5e5" />
+
+    <include layout="@layout/layout_loadview" />
+
+
+</LinearLayout>

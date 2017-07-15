@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/dialog_root"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:clickable="true"
+        android:background="@drawable/dialog_circle_white"
+        android:minHeight="@dimen/Z220px"
+        android:minWidth="@dimen/Z500px"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/dialog_tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center"
+            android:maxLines="1"
+            android:paddingTop="@dimen/Z30px"
+            android:text="title"
+            android:textColor="#323232"
+            android:textSize="@dimen/Z30px"
+            android:visibility="gone" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="@dimen/Z30px"
+            android:layout_marginLeft="@dimen/Z50px"
+            android:layout_marginRight="@dimen/Z50px"
+            android:layout_marginTop="@dimen/Z30px"
+            android:minHeight="@dimen/Z120px"
+            android:paddingBottom="@dimen/Z30px">
+
+
+            <TextView
+                android:id="@+id/dialog_tv_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center_horizontal"
+                android:paddingBottom="@dimen/Z10px"
+                android:text=""
+                android:textColor="#323232"
+                android:textSize="@dimen/Z30px" />
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/Z30px">
+
+            <View
+                android:id="@+id/view_center"
+                android:layout_width="1px"
+                android:layout_height="1px"
+                android:layout_centerInParent="true" />
+
+            <TextView
+                android:id="@+id/dialog_tv_cancel"
+                android:layout_width="@dimen/Z200px"
+                android:layout_height="@dimen/Z60px"
+                android:layout_gravity="center_horizontal"
+
+                android:layout_marginLeft="@dimen/Z50px"
+                android:layout_marginRight="@dimen/Z30px"
+                android:layout_toLeftOf="@id/view_center"
+                android:background="@drawable/dialog_bg_circle_cancel"
+                android:gravity="center"
+                android:text="取 消"
+                android:textColor="#323232"
+                android:textSize="@dimen/Z30px" />
+
+            <TextView
+                android:id="@+id/dialog_tv_commit"
+                android:layout_width="@dimen/Z200px"
+                android:layout_height="@dimen/Z60px"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="@dimen/Z30px"
+                android:layout_marginRight="@dimen/Z50px"
+                android:layout_toRightOf="@id/view_center"
+                android:background="@drawable/dialog_bg_circle_cancel"
+                android:gravity="center"
+                android:text="确 定"
+                android:textColor="#ff454a"
+                android:textSize="@dimen/Z30px" />
+
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>

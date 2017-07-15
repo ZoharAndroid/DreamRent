@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- 对应加载的Fragment类名为：HouseDetailActivity-->
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorProjectBackground"
+        android:orientation="vertical">
+
+
+        <!--图片展示Fragment-->
+        <FrameLayout
+            android:id="@+id/fl_house_detail_content_top_show"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/white" />
+
+        <!--标题、特点和价格-->
+        <FrameLayout
+            android:id="@+id/fl_house_detail_content_character"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/white" />
+
+        <!--房间类型和房间大小-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dip"
+            android:background="@android:color/white"
+            android:paddingBottom="14dip"
+            android:paddingTop="14dip">
+
+            <ImageView
+                android:id="@+id/iv_house_room"
+                android:layout_width="30dip"
+                android:layout_height="30dip"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="20dip"
+                android:src="@drawable/house_room" />
+
+            <TextView
+                android:id="@+id/tv_house_home_describe"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dip"
+                android:layout_toRightOf="@id/iv_house_room"
+                android:textSize="14sp" />
+
+            <ImageView
+                android:id="@+id/iv_house_size"
+                android:layout_width="30dip"
+                android:layout_height="30dip"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dip"
+                android:layout_toRightOf="@id/tv_house_home_describe"
+                android:src="@drawable/house_size" />
+
+            <TextView
+                android:id="@+id/tv_house_size"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dip"
+                android:layout_toRightOf="@id/iv_house_size"
+                android:textSize="14sp" />
+
+            <Button
+                android:minHeight="0dip"
+                android:minWidth="0dip"
+                android:background="@drawable/button_style_house_detail"
+                android:id="@+id/btn_see_whole_scan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_gravity="right"
+                android:layout_marginRight="10dip"
+                android:text="查看全景图"
+                android:textColor="#FFA510"
+                android:textSize="14sp"
+                android:layout_alignTop="@+id/iv_house_size"
+                android:layout_alignParentBottom="true" />
+
+        </RelativeLayout>
+
+        <!--配置设施-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dip"
+            android:background="@android:color/white"
+            android:orientation="vertical"
+            android:paddingBottom="14dip"
+            android:paddingTop="14dip">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dip"
+                android:text="配置设施"
+                android:textSize="18sp" />
+
+            <FrameLayout
+                android:layout_marginLeft="20dip"
+                android:layout_marginTop="20dip"
+                android:id="@+id/fl_house_detail_content_allocation_facilities"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <!--房源描述-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dip"
+            android:background="@android:color/white"
+            android:orientation="vertical"
+            android:paddingBottom="14dip"
+            android:paddingTop="14dip">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dip"
+                android:text="房源描述"
+                android:textSize="18sp" />
+
+            <FrameLayout
+                android:layout_marginTop="20dip"
+                android:id="@+id/fl_house_detail_content_house_describe"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <!--　百度地图　-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="200dip"
+            android:layout_marginTop="6dip"
+            android:background="@android:color/white">
+
+            <FrameLayout
+                android:layout_marginTop="20dip"
+                android:id="@+id/fl_house_detail_content_baidu_map"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:orientation="horizontal"
+                android:padding="3dip">
+
+                <ImageView
+                    android:layout_width="25dip"
+                    android:layout_height="25dip"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="20dip"
+                    android:paddingBottom="3dip"
+                    android:paddingTop="3dip"
+                    android:src="@drawable/baidu_map" />
+
+                <TextView
+                    android:id="@+id/tv_house_detail_content_address"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="5dip"
+                    android:layout_weight="1"
+                    android:textSize="14sp" />
+
+                <ImageButton
+                    android:layout_width="20dip"
+                    android:layout_height="20dip"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="10dip"
+                    android:background="@drawable/right_arrow"
+                    android:paddingBottom="5dip"
+                    android:paddingTop="5dip" />
+
+            </LinearLayout>
+        </RelativeLayout>
+
+        <!-- 管家　-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dip"
+            android:background="@android:color/white"
+            android:orientation="horizontal">
+
+            <!--圆形头像-->
+            <com.leslie.dream.mxzlw.widget.CircleImageViewWithBorder
+                android:layout_marginLeft="20dip"
+                android:layout_marginBottom="20dip"
+                android:layout_marginTop="20dip"
+                android:id="@+id/civb_steward_head_icon"
+                android:layout_width="60dip"
+                android:layout_height="60dip"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/default_head_icon"
+                app:border_color="#000000"
+                app:border_size="1dp" />
+
+            <TextView
+                android:layout_marginLeft="15dip"
+                android:id="@+id/tv_steward_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/civb_steward_head_icon"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tv_steward_service_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dip"
+                android:layout_toRightOf="@id/tv_steward_name"
+                android:text="服务次数:"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tv_steward_grad"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dip"
+                android:layout_toRightOf="@id/tv_steward_service_count"
+                android:text="评分:"
+                android:textSize="16sp" />
+
+            <ImageButton
+                android:id="@+id/ib_steward_call_phone"
+                android:layout_width="30dip"
+                android:layout_height="30dip"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dip"
+                android:background="@drawable/steward_phone_icon"
+                android:paddingBottom="5dip"
+                android:paddingTop="5dip" />
+
+        </RelativeLayout>
+
+        <!-- 其他推荐-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dip"
+            android:background="@android:color/white"
+            android:orientation="vertical"
+            android:paddingBottom="14dip"
+            android:paddingTop="14dip">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dip"
+                android:text="其他推荐"
+                android:textSize="18sp" />
+
+            <FrameLayout
+                android:layout_marginTop="20dip"
+                android:id="@+id/fl_house_detail_content_other_recommend"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+</ScrollView>

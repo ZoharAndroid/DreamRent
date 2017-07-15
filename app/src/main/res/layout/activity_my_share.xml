@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.MyHireActivity">
+
+    <include layout="@layout/layout_actionbar" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/Z500px"
+        android:background="@color/colorPrimary">
+
+        <ImageView
+            android:id="@+id/my_share_img"
+            android:layout_width="@dimen/Z200px"
+            android:layout_height="@dimen/Z200px"
+            android:layout_centerInParent="true"
+            android:src="@drawable/my_code" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/Z200px"
+        android:orientation="horizontal">
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/Z50px"
+                android:layout_gravity="center"
+                android:text="我推荐人数"
+                android:textSize="@dimen/Z30px"/>
+            <TextView
+                android:id="@+id/share_number_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/Z30px"
+                android:layout_gravity="center"
+                android:text="0"
+                android:textSize="@dimen/Z30px"/>
+
+        </LinearLayout>
+        <View
+            android:layout_width="@dimen/Z4px"
+            android:layout_height="@dimen/Z150px"
+            android:layout_gravity="center"
+            android:background="@color/color_line" />
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/Z50px"
+                android:layout_gravity="center"
+                android:text="我的推荐人"
+                android:textSize="@dimen/Z30px"/>
+            <TextView
+                android:id="@+id/share_tome_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/Z30px"
+                android:layout_gravity="center"
+                android:text="0"
+                android:textSize="@dimen/Z30px"/>
+
+        </LinearLayout>
+        <View
+            android:layout_width="@dimen/Z4px"
+            android:layout_height="@dimen/Z150px"
+            android:layout_gravity="center"
+            android:background="@color/color_line" />
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/Z50px"
+                android:layout_gravity="center"
+                android:text="我的团队"
+                android:textSize="@dimen/Z30px"/>
+            <TextView
+                android:id="@+id/share_team_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/Z30px"
+                android:layout_gravity="center"
+                android:text="0"
+                android:textSize="@dimen/Z30px"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/Z4px"
+        android:layout_gravity="center"
+        android:background="@color/color_line" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/share_tv"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/Z100px"
+            android:layout_marginLeft="@dimen/Z200px"
+            android:layout_marginRight="@dimen/Z200px"
+            android:layout_marginTop="@dimen/Z60px"
+            android:background="@drawable/bg_btn_commit"
+            android:gravity="center"
+            android:text="立即分享"
+            android:textColor="#ffffff"
+            android:textSize="@dimen/Z30px" />
+    </LinearLayout>
+
+
+</LinearLayout>

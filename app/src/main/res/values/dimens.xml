@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="activity_horizontal_margin">@dimen/Z36px</dimen>
+    <dimen name="activity_vertical_margin">@dimen/Z36px</dimen>
+    <dimen name="my_self_img_margin">@dimen/Z22px</dimen>
+    <dimen name="my_self_img_hw">@dimen/Z40px</dimen>
+    <dimen name="my_self_normal_padding">@dimen/Z8px</dimen>
+    <dimen name="my_self_text_size">@dimen/Z30px</dimen>
+    <dimen name="my_self_img_arrow_margin">@dimen/Z16px</dimen>
+    <dimen name="my_self_card_margin">@dimen/Z20px</dimen>
+    <dimen name="fab_margin">@dimen/Z36px</dimen>
+
+
+</resources>

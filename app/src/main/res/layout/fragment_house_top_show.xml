@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--对应加载的Fragment类名为：HouseTopShowFragment -->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.leslie.dream.mxzlw.widget.HouseTopShowScrollViewPager
+        android:id="@+id/vp_house_detail_top_show"
+        android:layout_width="match_parent"
+        android:layout_height="220dip"/>
+
+    <RelativeLayout
+        android:background="#9000"
+        android:paddingBottom="5dip"
+        android:paddingTop="5dip"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/vp_house_detail_top_show">
+
+        <TextView
+            android:id="@+id/tv_house_top_show_release_date"
+            android:layout_marginLeft="10dip"
+            android:textColor="@android:color/white"
+            android:layout_centerVertical="true"
+            android:textSize="16sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2017年7月5日发"/>
+
+
+        <TextView
+            android:id="@+id/tv_house_top_show_explore_count"
+            android:layout_marginRight="10dip"
+            android:layout_alignParentRight="true"
+            android:textColor="@android:color/white"
+            android:layout_centerVertical="true"
+            android:textSize="16sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="浏览人数:9999"/>
+
+        <TextView
+            android:layout_marginRight="8dip"
+            android:layout_toLeftOf="@id/tv_house_top_show_explore_count"
+            android:id="@+id/tv_house_top_show_collection_count"
+            android:textColor="@android:color/white"
+            android:layout_centerVertical="true"
+            android:textSize="16sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="收藏数:2"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

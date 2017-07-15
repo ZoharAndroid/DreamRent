@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    >
+
+    <LinearLayout
+        android:layout_width="@dimen/Z500px"
+        android:layout_height="wrap_content"
+        android:background="@drawable/dialog_circle_white"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <com.leslie.dream.mxzlw.widget.v7.BiuEditText
+            android:id="@+id/dialog_et_uname"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/Z80px"
+            android:layout_marginBottom="@dimen/Z20px"
+            android:layout_marginLeft="@dimen/Z30px"
+            android:layout_marginRight="@dimen/Z30px"
+            android:layout_marginTop="@dimen/Z30px"
+            android:background="@drawable/bg_white_c"
+            android:hint="请输入昵称"
+            android:textColorHint="@color/diver_color"
+            android:maxLength="10"
+            android:maxLines="1"
+            android:paddingLeft="5px"
+            android:textSize="@dimen/Z30px"
+            android:textCursorDrawable="@drawable/color_cursor"/>
+
+        <TextView
+            android:id="@+id/dialog_tv_uname_confirm"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/Z72px"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="@dimen/Z30px"
+            android:background="@drawable/btn_bg_style"
+            android:gravity="center"
+            android:text="确 定"
+            android:textColor="@color/default_color"
+            android:textSize="@dimen/Z30px" />
+
+    </LinearLayout>
+
+</RelativeLayout>

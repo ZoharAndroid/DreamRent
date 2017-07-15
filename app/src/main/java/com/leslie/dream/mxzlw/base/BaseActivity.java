@@ -1,0 +1,312 @@
+package com.leslie.dream.mxzlw.base;
+
+import android.app.Activity;
+import android.app.Dialog;
+import android.graphics.drawable.Drawable;
+import android.os.Bundle;
+import android.support.v4.app.FragmentActivity;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
+import android.widget.TextView;
+
+import com.leslie.dream.mxzlw.R;
+import com.leslie.dream.mxzlw.interfaces.IOnActivityDispatchListener;
+import com.leslie.dream.mxzlw.interfaces.IRefreshTopMoreListener;
+import com.leslie.dream.mxzlw.manager.ActivityStartManager;
+import com.leslie.dream.mxzlw.util.CommonUtils;
+import com.leslie.dream.mxzlw.util.ImageLoader;
+import com.leslie.dream.mxzlw.widget.v7.HeaderRefreshView;
+import com.leslie.dream.mxzlw.widget.v7.ProgressImageView;
+import com.leslie.dream.mxzlw.widget.v7.RecyclerViewWrap;
+
+
+/**
+ * Activity 基类
+ *
+ * @Author dzl on 2017/7/4.
+ */
+public class BaseActivity extends FragmentActivity
+        implements OnClickListener, IOnActivityDispatchListener, IRefreshTopMoreListener, BaseAdapter.OnItemClickListener {
+
+    public final String TAG = CommonUtils.getTag(this);
+
+    // ======== url请求列表 ========
+    public static final int URL_LIST = 1;
+
+
+
+    public static final int VISIBLE = View.VISIBLE;
+    public static final int GONE = View.GONE;
+    public static final int INVISIBLE = View.INVISIBLE;
+
+    // ======== 网络请求加载模式 ========
+    public static final int LOAD_AUTO = 1; // 加载方式 （1自动、2顶部刷新、3加载更多）
+    public static final int LOAD_TOP = 2;
+    public static final int LOAD_MORE = 3;
+
+    // ======== 页次页码、是否是最后一页(最后一页，则禁用加载更多) ========
+    protected int page;
+    protected boolean is_last_page;
+
+    protected Activity context;
+
+    protected LinearLayout loadview_ll; // 加载父布局
+    protected ProgressImageView loadview_pb;
+    protected TextView loadview_tv;
+
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        context = this;
+
+    }
+
+    public Activity getContext() {
+        return context;
+    }
+
+    public void onError(int url_type, int load_type, String error) {
+
+    }
+
+    @Override
+    public Object onDispatchData(int what, Object... obj) {
+        return null;
+    }
+
+    @Override
+    public void onClick(View v) {
+
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        //Baidu.onResume(context);
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        //Baidu.onPause(context);
+    }
+
+    /**
+     * 判断空
+     */
+    public boolean isEmpty(Object list) {
+        return CommonUtils.isEmpty(list);
+    }
+
+    /**
+     * toast
+     */
+    public void toast(CharSequence text) {
+        CommonUtils.toast(getContext(), text);
+    }
+
+
+    /**
+     * 格式化
+     */
+    public String format(String format, Object... args) {
+        return CommonUtils.format(format, args);
+    }
+
+    /**
+     * 格式化N位小数
+     * <p>
+     * 默认保留2位
+     */
+    public String formatDouble(double number, int... n) {
+        return CommonUtils.formatDouble(number, n);
+    }
+
+    /**
+     * 设置view 可见性
+     */
+    public void setViewVisible(View view, boolean... isVisible) {
+        CommonUtils.setViewVisible(view, isVisible);
+    }
+
+    /**
+     * 设置点击监听
+     */
+    public void setOnClickListener(View view) {
+        CommonUtils.setOnClickListener(view, this);
+    }
+
+    /**
+     * 设置view 选中
+     */
+    public void setViewSelect(View view, boolean... isSelect) {
+        CommonUtils.setViewSelect(view, isSelect);
+    }
+
+    /**
+     * 设置 文本
+     */
+    public void setText(TextView view, CharSequence text) {
+        CommonUtils.setText(view, text);
+    }
+
+    /**
+     * 设置view 选中
+     */
+    public void setViewEnable(View view, boolean... isEnable) {
+        CommonUtils.setViewEnable(view, isEnable);
+    }
+
+    /**
+     * 缓存
+     */
+    public boolean cache(Object... obj) {
+        return CommonUtils.cache(getContext(), obj);
+    }
+
+    /**
+     * 创建dialog
+     */
+    public Dialog createDialog(int layout, int theme, boolean... cancel) {
+        return CommonUtils.createDialog(getContext(), layout, theme, cancel);
+    }
+
+    /**
+     * 创建dialog
+     */
+    public Dialog createDialog(View view, int theme, boolean... cancel) {
+        return CommonUtils.createDialog(getContext(), view, theme, cancel);
+    }
+
+    /**
+     * 加载 layout
+     */
+    public View inflateView(int layoutId, ViewGroup... root) {
+        return CommonUtils.inflateView(getContext(), layoutId, root);
+    }
+
+    /**
+     * 加载图片
+     */
+    public void loadImage(ImageView view, String url, int... resId) {
+        ImageLoader.loadImage(view, url, resId);
+
+    }
+
+    //通过这个方法快速获取一个view，自动强制类型转换
+    protected <T extends View> T fv(int id, View... view) {
+        if (view.length > 0) {
+            return (T) view[0].findViewById(id);
+        }
+        return (T) findViewById(id);
+    }
+
+    /**
+     * 返回当前实例
+     */
+    public Activity self() {
+        return getContext();
+    }
+
+    /**
+     * 显示Toast
+     */
+    public void showToast(Object msg) {
+        toast(String.valueOf(msg));
+    }
+
+    /**
+     * 启动
+     */
+    public void startActivity(Class<? extends Activity> clz, Object... obj) {
+        ActivityStartManager.startActivity(getContext(), clz, obj);
+    }
+
+    /**
+     * 启动
+     */
+    public void startActivity(int requst_code, Class<? extends Activity> clz, Object... obj) {
+        ActivityStartManager.startActivity(requst_code, getContext(), clz, obj);
+    }
+
+    /**
+     * 加载 尺寸
+     */
+    public float getDimen_(int resId) {
+        return CommonUtils.getDimen_(getContext(), resId);
+    }
+
+    /**
+     * 加载 drawable
+     */
+    public Drawable getDrawable_(int resId) {
+        return CommonUtils.getDrawable_(getContext(), resId);
+    }
+
+    /**
+     * 加载 color
+     */
+    public int getColor_(int resId) {
+        return CommonUtils.getColor_(getContext(), resId);
+    }
+
+    /**
+     * 设置 color
+     * eg: 0xff00ff00 16进制
+     */
+    public static void setViewColor(View view, int color_hex) {
+        CommonUtils.setViewColor(view, color_hex);
+    }
+
+    /**
+     * 设置 color
+     * eg: R.color|drawable.xx
+     */
+    public static void setViewColorRes(View view, int resId) {
+        CommonUtils.setViewColorRes(view, resId);
+    }
+
+    protected void initLoadView() {
+        loadview_ll = fv(R.id.loadview_ll);
+        loadview_pb = fv(R.id.loadview_pb);
+        loadview_tv = fv(R.id.loadview_tv);
+    }
+
+    @Override
+    public void onLoadMore(View view) {
+
+    }
+
+    @Override
+    public void onRefresh() {
+
+    }
+
+    /**
+     * 设置 recyclerview 刷新
+     */
+    protected void setRefreshLister(RecyclerViewWrap recyclerview) {
+        HeaderRefreshView header = new HeaderRefreshView(getContext());
+        header.setLayoutParams(new RelativeLayout.LayoutParams(-1, (int) getDimen_(R.dimen.Z200px)));
+
+        recyclerview.setRefreshHeaderView(header);
+
+        //设置 刷新监听
+        recyclerview.setOnRefreshListener(this);
+        recyclerview.setOnLoadMoreListener(this);
+
+        //禁止头部刷新  底部加载更多
+        recyclerview.setLoadMoreEnabled(false);
+        recyclerview.setRefreshEnabled(true);
+    }
+
+    @Override
+    public void onItemClick(View itemView, int position, int... what) {
+
+    }
+}

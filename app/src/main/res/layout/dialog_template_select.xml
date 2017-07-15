@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/dialog_root"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <FrameLayout
+        android:layout_width="@dimen/Z500px"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/dialog_rl_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="@dimen/Z120px"
+            android:layout_marginTop="@dimen/Z200px"
+            android:background="@drawable/dialog_circle_white"
+            android:clickable="true"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/dialog_tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/Z20px"
+                android:gravity="center"
+                android:text=""
+                android:textColor="#2f2f2f"
+                android:textSize="@dimen/Z34px" />
+
+            <View
+                android:id="@+id/dialog_view"
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_below="@id/dialog_tv_title"
+                android:layout_marginTop="@dimen/Z20px"
+                android:background="#eeeeee" />
+
+            <com.leslie.dream.mxzlw.widget.v7.RecyclerViewWrap
+                android:id="@+id/dialog_recyclerview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/dialog_view"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="@dimen/Z30px" />
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/dialog_view_placeholder"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/Z200px" />
+
+        <TextView
+            android:id="@+id/dialog_tv_cancel"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/Z80px"
+            android:layout_gravity="center_horizontal|bottom"
+            android:layout_marginBottom="@dimen/Z20px"
+            android:layout_marginTop="@dimen/Z20px"
+            android:background="@drawable/tv_white_gray"
+            android:gravity="center"
+            android:text="取  消"
+            android:textColor="#2f2f2f"
+            android:textSize="@dimen/Z30px" />
+    </FrameLayout>
+
+</RelativeLayout>

@@ -1,0 +1,25 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/default_layout_bg"
+    android:orientation="vertical"
+    >
+
+
+    <com.leslie.dream.mxzlw.util.UserDefineScrollView
+        android:id="@+id/scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+        <include layout="@layout/frag_personal" />
+
+
+    </com.leslie.dream.mxzlw.util.UserDefineScrollView>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/Z20px"
+        android:background="@color/default_layout_bg" />
+
+</LinearLayout>

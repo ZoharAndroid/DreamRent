@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:padding="8dip"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:textSize="14sp"
+            android:textColor="@android:color/black"
+            android:id="@+id/tv_home_city_name"
+            android:clickable="true"
+            android:paddingTop="5dip"
+            android:paddingBottom="5dip"
+            android:paddingLeft="15dip"
+            android:paddingRight="15dip"
+            android:layout_gravity="center"
+            android:background="@drawable/text_top_city_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="南宁市"/>
+
+        <EditText
+            android:layout_marginLeft="5dip"
+            android:layout_gravity="center"
+            android:id="@+id/et_search"
+            android:textSize="@dimen/Z30px"
+            android:maxLines="1"
+            android:paddingLeft="10dip"
+            android:textColor="#323232"
+            android:textColorHint="#a6a6a6"
+            android:textCursorDrawable="@drawable/color_cursor"
+            android:hint="搜索房源"
+            android:background="@drawable/edit_input"
+            android:layout_width="0dip"
+            android:layout_weight="1"
+            android:layout_height="30dip" />
+
+       <ImageView
+           android:layout_marginLeft="2dip"
+           android:layout_gravity="center"
+           android:id="@+id/iv_search"
+           android:layout_width="30dip"
+           android:layout_height="30dip"
+           android:src="@drawable/search"/>
+    </LinearLayout>
+
+
+</LinearLayout>
